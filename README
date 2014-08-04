@@ -1,0 +1,99 @@
+NAME
+    Perinci::CmdLine::NonOO - Non-OO interface for Perinci::CmdLine
+
+VERSION
+    This document describes version 0.01 of Perinci::CmdLine::NonOO (from
+    Perl distribution Perinci-CmdLine-NonOO), released on 2014-08-04.
+
+SYNOPSIS
+     use Perinci::CmdLine::NonOO qw(run_cmdline_app);
+     run_cmdline_app(url => '/Foo/bar');
+
+    which is equivalent to:
+
+     use Perinci::CmdLine::Lite;
+     my $cli = Perinci::CmdLine::Lite->new(url => '/Foo/bar');
+     $cli->run;
+
+DESCRIPTION
+    Perinci::CmdLine (or its alternatives Perinci::CmdLine::Lite,
+    Perinci::CmdLine::Any) is a command-line application framework. It
+    "exports" your functions as a CLI application. However, Perinci::CmdLine
+    itself has an OO interface, which can be seen as ironic. This module is
+    an attempt to fix this.
+
+FUNCTIONS
+  run_cmdline_app(%args) -> any
+    Arguments ('*' denotes required arguments):
+
+    *   actions => *any*
+
+    *   common_opts => *any*
+
+    *   completion => *any*
+
+    *   default_subcommand => *any*
+
+    *   description => *any*
+
+    *   exit => *any* (default: 1)
+
+    *   formats => *any*
+
+    *   get_subcommand_from_arg => *any* (default: 1)
+
+    *   pass_cmdline_object => *any* (default: 0)
+
+    *   per_arg_json => *any*
+
+    *   per_arg_yaml => *any*
+
+    *   program_name => *any* (default: "dzil")
+
+    *   riap_client => *any*
+
+    *   riap_client_args => *any*
+
+    *   subcommands => *any*
+
+    *   summary => *any*
+
+    *   tags => *any*
+
+    *   url => *any*
+
+    Return value:
+
+     (any)
+
+STATUS
+    Experimental, proof of concept.
+
+SEE ALSO
+    Perinci::CmdLine, Perinci::CmdLine::Lite, Perinci::CmdLine::Any
+
+HOMEPAGE
+    Please visit the project's homepage at
+    <https://metacpan.org/release/Perinci-CmdLine-NonOO>.
+
+SOURCE
+    Source repository is at
+    <https://github.com/sharyanto/perl-Perinci-CmdLine-NonOO>.
+
+BUGS
+    Please report any bugs or feature requests on the bugtracker website
+    <https://rt.cpan.org/Public/Dist/Display.html?Name=Perinci-CmdLine-NonOO
+    >
+
+    When submitting a bug or request, please include a test-file or a patch
+    to an existing test-file that illustrates the bug or desired feature.
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2014 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
